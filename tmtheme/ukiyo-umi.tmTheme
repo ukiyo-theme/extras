@@ -9,7 +9,7 @@
 	<key>settings</key>
 	<array>
 		<dict><key>settings</key><dict><key>background</key><string>#1A1A22</string><key>foreground</key><string>#E2DCC5</string><key>caret</key><string>#E2DCC5</string><key>lineHighlight</key><string>#22222C</string><key>selection</key><string>#2D3F5C</string><key>selectionForeground</key><string>#E2DCC5</string><key>invisibles</key><string>#54546D</string><key>gutter</key><string>#1A1A22</string><key>gutterForeground</key><string>#54546D</string><key>findHighlight</key><string>#3D5378</string><key>findHighlightForeground</key><string>#E2DCC5</string><key>guide</key><string>#2A2A37</string><key>activeGuide</key><string>#54546D</string></dict></dict>
-		<dict><key>name</key><string>Comment</string><key>scope</key><string>comment, punctuation.definition.comment</string><key>settings</key><dict><key>foreground</key><string>#8A8980</string><key>fontStyle</key><string>italic</string></dict></dict>
+		<dict><key>name</key><string>Comment</string><key>scope</key><string>comment, punctuation.definition.comment</string><key>settings</key><dict><key>foreground</key><string>#ABAAA4</string><key>fontStyle</key><string>italic</string></dict></dict>
 		<dict><key>name</key><string>Variable</string><key>scope</key><string>variable, variable.other, variable.other.readwrite, meta.definition.variable</string><key>settings</key><dict><key>foreground</key><string>#E2DCC5</string></dict></dict>
 		<dict><key>name</key><string>Builtin variable</string><key>scope</key><string>variable.language, variable.language.this, variable.language.self, variable.language.super, variable.parameter.function.language.special.self</string><key>settings</key><dict><key>foreground</key><string>#E8707E</string><key>fontStyle</key><string>italic</string></dict></dict>
 		<dict><key>name</key><string>Parameter</string><key>scope</key><string>variable.parameter, meta.parameter, entity.name.variable.parameter</string><key>settings</key><dict><key>foreground</key><string>#B8B4D0</string></dict></dict>
@@ -42,7 +42,7 @@
 		<dict><key>name</key><string>Diff deleted</string><key>scope</key><string>markup.deleted, meta.diff.header.from-file</string><key>settings</key><dict><key>foreground</key><string>#E8707E</string></dict></dict>
 		<dict><key>name</key><string>Diff changed</string><key>scope</key><string>markup.changed</string><key>settings</key><dict><key>foreground</key><string>#D6B77A</string></dict></dict>
 		<dict><key>name</key><string>Invalid</string><key>scope</key><string>invalid, invalid.illegal</string><key>settings</key><dict><key>foreground</key><string>#F2616E</string></dict></dict>
-		<dict><key>name</key><string>Deprecated</string><key>scope</key><string>invalid.deprecated</string><key>settings</key><dict><key>foreground</key><string>#8A8980</string><key>fontStyle</key><string>strikethrough</string></dict></dict>
+		<dict><key>name</key><string>Deprecated</string><key>scope</key><string>invalid.deprecated</string><key>settings</key><dict><key>foreground</key><string>#ABAAA4</string><key>fontStyle</key><string>strikethrough</string></dict></dict>
 	</array>
 </dict>
 </plist>

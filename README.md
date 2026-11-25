@@ -1,6 +1,6 @@
 # Ukiyo extras
 
-[Ukiyo](https://github.com/ukiyo-theme/palette) themes for terminals and command-line tools.
+[Ukiyo](https://github.com/ukiyo-theme/palette) themes for coding agents, terminals, editors, and command-line tools.
 
 [View the palette](https://ukiyo-theme.github.io/palette/)
 
@@ -30,7 +30,7 @@
 | 5 | Magenta | `#C4A8F5` | `#B8A3D6` | `#523B83` |
 | 6 | Cyan | `#7FC4B4` | `#8FB8AA` | `#22564D` |
 | 7 | White | `#C8C093` | `#B5B0A3` | `#CAC3B1` |
-| 8 | Bright black | `#8A8980` | `#8C8578` | `#595750` |
+| 8 | Bright black | `#ABAAA4` | `#A09A8F` | `#4B4943` |
 | 9 | Bright red | `#F2616E` | `#E0616A` | `#981F2E` |
 | 10 | Bright green | `#8FB573` | `#94AD7E` | `#34611E` |
 | 11 | Bright yellow | `#E8C88A` | `#D9BE8C` | `#674B0F` |
@@ -42,6 +42,62 @@
 ## How to use
 
 Run the shell commands from the root of the extras repository. The examples use `umi`. Substitute `yoru` or `kami` to use another variant.
+
+### OpenCode
+
+For OpenCode 1.x, install the JSON files from `opencode/`. For the 2.x CLI, use `opencode/v2/`. Use one set per installation because the filenames are the same.
+
+```sh
+mkdir -p ~/.config/opencode/themes
+cp opencode/ukiyo-{umi,yoru,kami}.json ~/.config/opencode/themes/
+```
+
+Restart OpenCode and run `/themes` to select `ukiyo-umi`, `ukiyo-yoru`, or `ukiyo-kami`. Each file keeps its own appearance. [OpenCode themes](https://opencode.ai/docs/cli/theme/)
+
+### Codex CLI
+
+Install the TextMate themes into the `themes` directory under `CODEX_HOME`.
+
+```sh
+mkdir -p "${CODEX_HOME:-$HOME/.codex}/themes"
+cp tmtheme/*.tmTheme "${CODEX_HOME:-$HOME/.codex}/themes/"
+```
+
+Run `/theme` to select a Ukiyo variant. Codex uses it to highlight code and diffs. To match the rest of the session, set your terminal to the same Ukiyo variant. [Codex CLI themes](https://learn.chatgpt.com/docs/cli-customization#syntax-highlighting-and-themes)
+
+### Claude Code
+
+```sh
+mkdir -p ~/.claude/themes
+cp claude-code/ukiyo-{umi,yoru,kami}.json ~/.claude/themes/
+```
+
+Run `/theme` to select a Ukiyo variant. If you just created the directory, restart Claude Code first. This themes Claude Code's interface colors. Set the same variant in your terminal for the background and to match ANSI output. [Claude Code custom themes](https://code.claude.com/docs/en/terminal-config#create-a-custom-theme)
+
+### Pi
+
+```sh
+mkdir -p "${PI_CODING_AGENT_DIR:-$HOME/.pi/agent}/themes"
+cp pi/ukiyo-{umi,yoru,kami}.json "${PI_CODING_AGENT_DIR:-$HOME/.pi/agent}/themes/"
+```
+
+Restart Pi or run `/reload`, then open **Theme** in `/settings` and select a Ukiyo variant. Use the matching terminal palette for the session background. [Pi themes](https://github.com/earendil-works/pi/blob/main/packages/coding-agent/docs/themes.md)
+
+### Windows Terminal
+
+From PowerShell, install the fragment containing all three schemes.
+
+```powershell
+$ukiyoFragments = Join-Path $env:LOCALAPPDATA 'Microsoft\Windows Terminal\Fragments\Ukiyo'
+New-Item -ItemType Directory -Force $ukiyoFragments | Out-Null
+Copy-Item windows-terminal/ukiyo.json $ukiyoFragments
+```
+
+Restart Windows Terminal and set **Color scheme** under a profile's **Appearance** settings. [Windows Terminal fragments](https://learn.microsoft.com/en-us/windows/terminal/json-fragment-extensions)
+
+### JetBrains IDEs
+
+In a JetBrains IDE based on IntelliJ Platform 2024.3 or later, open **Settings → Plugins**, open the gear menu, and choose **Install Plugin from Disk…**. Select [`ukiyo.jar`](jetbrains/ukiyo.jar) and restart if prompted. Choose a Ukiyo variant under **Appearance & Behavior → Appearance → Theme**. The plugin includes the UI theme and its linked editor color scheme for each variant. [JetBrains plugin installation](https://www.jetbrains.com/help/idea/managing-plugins.html#install_plugin_from_disk)
 
 ### Ghostty
 
